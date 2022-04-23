@@ -135,6 +135,7 @@
 .title{
   float: left;
   color: white;
+  font-weight: bold;
 }
 
 .tab{
