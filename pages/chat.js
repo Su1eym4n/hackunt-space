@@ -13,24 +13,21 @@ export default function Chat() {
 
     return (
         <>
+
+        
         
         <div className={css.scene}>
         <Canvas
             shadows={true}
             className={css.canvas}
             camera={{
-            position: [-6, 7, 7],
+            position: [2, 2, 2],
             }}
         >
             <ambientLight color={"white"} intensity={0.2} />
             <LightBulb position={[0, 5, 3]} />
-
-
-          
-                    <ChatPlanet rotateX={3} rotateY={0.2} />
-                
-            
-            <OrbitControls/>
+            <ChatPlanet rotateX={5} rotateY={5} />
+            {/* <OrbitControls/> */}
         </Canvas>
     </div>
     </>
