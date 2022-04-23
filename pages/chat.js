@@ -23,7 +23,9 @@ export default function Chat() {
             <div className={css.title}>
             Final Frontier
             </div>
-            <TabBar className={css.tab}/>
+            <TabBar 
+            page="Adventure"
+            className={css.tab}/>
         </div>
 {/* scene */}
         <div className={css.scene}>

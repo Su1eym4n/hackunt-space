@@ -1,10 +1,10 @@
 import React from 'react'
-
+import css from '../styles/Home.module.css'
 const Choice = ({ text }) => {
     return (
-        <div className="">
+        <div className={css.choiceWrapper}>
             <div>
-                text
+                {text}
             </div>
         </div>
     )

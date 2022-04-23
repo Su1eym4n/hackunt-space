@@ -141,3 +141,37 @@
   float: right;
 }
 
+.choiceWrapper{
+  border-radius: 8px;
+  background-color: #000;
+  border-style: solid;
+  border-color: #fafafa;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+}
+
+.textMessageA{
+  color:coral;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+}
+
+
+.textMessageU{
+  color: greenyellow;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+}

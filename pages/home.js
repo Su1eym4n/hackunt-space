@@ -6,7 +6,6 @@ function home() {
     return (
         
         <div className={styles.container}>
-            <div><Canvas><Redplanet/></Canvas></div>
             <div>
                 <Canvas>
                     <RedPlanet />
