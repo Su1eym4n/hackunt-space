@@ -13,8 +13,9 @@ function ChatPlanet(props) {
     ])
 
   useFrame(() => {
-    mesh.current.rotation.x += 0.01
+    mesh.current.rotation.x += props.rotateAmount
   })
+
 
   mesh.scale = 10
 
