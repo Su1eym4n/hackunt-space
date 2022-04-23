@@ -124,3 +124,18 @@
 .canvas{
   background: #000;
 }
+
+.nav{
+  display: flex;
+  flex-direction: row inline;
+  background-color: black;
+}
+
+.title{
+  float: left;
+  color: white;
+}
+
+.tab{
+  float: right;
+}

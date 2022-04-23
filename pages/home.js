@@ -4,7 +4,9 @@ import RedPlanet from '../components/RedPlanet'
 import styles from '../styles/Home.module.css'
 function home() {
     return (
+        
         <div className={styles.container}>
+            <div><Canvas><Redplanet/></Canvas></div>
             <div>
                 <Canvas>
                     <RedPlanet />

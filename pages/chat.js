@@ -1,7 +1,7 @@
 // import { Canvas as CanvasCSS3D, useFrame as useFrameCSS3D, useThree as useThreeCSS3D } from '@react-three/fiber'
 import { Canvas } from '@react-three/fiber'
 import css from "../styles/Home.module.css"
-
+import TabBar from '../components/TabBar';
 import Floor from "../components/Floor"
 import LightBulb from '../components/LightBulb'
 import OrbitControls from '../components/OrbitControls'
@@ -12,10 +12,14 @@ import { CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer'
 export default function Chat() {
 
     return (
-        <>
-
-        
-        
+     <>
+        <div className={css.nav}>
+            <div className={css.title}>
+            Final Frontier
+            </div>
+            <TabBar className={css.tab}/>
+        </div>
+    
         <div className={css.scene}>
         <Canvas
             shadows={true}
