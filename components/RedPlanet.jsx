@@ -6,16 +6,14 @@ function RedPlanet() {
     useFrame(({ clock }) => {
         //const a = clock.getElapsedTime()
         mesh.current.rotation.x = clock.getElapsedTime()
-       
-      })
-    
+
+    })
+
     return (
-        <mesh ref={mesh}>
-            <boxGeometry />
-            <meshBasicMaterial color="royalblue" />
-        </mesh>
+            <mesh ref={mesh}>
+                <torusGeometry />
+                <meshBasicMaterial color='green' wireframe='true' />
+            </mesh>
     )
-
 }
-
 export default RedPlanet

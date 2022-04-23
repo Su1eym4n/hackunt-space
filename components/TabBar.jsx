@@ -1,9 +1,9 @@
-import React from 'react'
 import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { useRouter } from 'next/router'
+import { useState } from 'react';
 
 const StyledTabs = styled((props) => (
     <Tabs
@@ -40,7 +40,7 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
 );
 
 function TabBar() {
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = useState(0);
     const routes = useRouter()
     const handleChange = (event, newValue) => {
         setValue(newValue);
