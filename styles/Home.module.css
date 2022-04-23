@@ -62,8 +62,8 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  /* font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace; */
 }
 
 .grid {
@@ -129,6 +129,7 @@
   display: flex;
   flex-direction: row inline;
   background-color: black;
+
 }
 
 .title{
@@ -140,8 +141,3 @@
   float: right;
 }
 
-.choice{
-  bg 
-  hover:bg-[#1b8cd8];
-   flex items-center justify-center font-bold rounded-3xl h-[50px] mt-[20px] cursor-pointer
-}
