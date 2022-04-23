@@ -156,6 +156,10 @@
   margin: 4px 2px;
 }
 
+.msgWrapper{
+  display: flex;
+  flex-direction: row inline;
+}
 .textMessageA{
   color:coral;
   padding: 7px;
@@ -169,6 +173,17 @@
 
 .textMessageU{
   color: greenyellow;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+
+}
+
+.msg{
+  color:white;
   padding: 7px;
   text-align: center;
   text-decoration: none;
