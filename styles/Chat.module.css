@@ -1,0 +1,17 @@
+.container{ 
+    width: 100vw;
+    height: 100vh;
+}
+
+.history {
+    float: left;
+    width: 25%;
+    height: 100vh;
+}
+
+.scene {
+    float: left;
+    height: 75vh;
+    width: 75vw;
+    background: black;
+}
