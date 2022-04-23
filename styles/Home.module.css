@@ -1,6 +1,6 @@
 .container {
   padding: 0 2rem;
-  background-color:darkslateblue;
+  background-color:black;
 }
 
 .main {
@@ -125,19 +125,23 @@
   background: #000;
 }
 
-.l{
-  color:#eaeaea
-}
-
-.row {
-  width: 100%;
+.nav{
   display: flex;
-  flex-direction: row;
-
+  flex-direction: row inline;
+  background-color: black;
 }
 
-.menuWrapper{
-  right: 150px;
+.title{
+  float: left;
+  color: white;
 }
 
+.tab{
+  float: right;
+}
 
+.choice{
+  bg 
+  hover:bg-[#1b8cd8];
+   flex items-center justify-center font-bold rounded-3xl h-[50px] mt-[20px] cursor-pointer
+}
