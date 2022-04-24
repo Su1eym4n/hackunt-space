@@ -89,7 +89,10 @@ export default function Chat() {
     //set the choice
     const [choice, setChoice] = useState('')
     //to update feed
-    const [feed, updateFeed] = useState([])
+    const [feed, updateFeed] = useState(['Hello, I am Mr. Astronaut. It is so nice to meet you!'])
+    const [message, setmessage] = useState('')
+
+
     const nextStage = () => {
 
         if (currentIndex <= 5) {
@@ -99,7 +102,10 @@ export default function Chat() {
         }
 
     }
-
+    const updateHistory = ()=>{
+        updateFeed(prevState => [...prevState, message])
+        console.log(feed)
+    }
     return (
         <>
             <div className={huy.nav}>
@@ -118,7 +124,7 @@ export default function Chat() {
                 </div>
             </div>
             <div className={css.container}>
-                <div classname={css.sideWrapper}>
+                <div className={css.sideWrapper}>
                     <div className={css.avatar}>
                         Astronaut
                     </div>
@@ -127,84 +133,21 @@ export default function Chat() {
                         <Button onClick={(event) => setStage(stage2)}>Click Me</Button>
                         <Button onClick={(event) => setStage(stage1)}>stage1</Button>
                         <Button onClick={(event) => nextStage()}>Next</Button>
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                            sender="A"
+                        {feed.map((msg, index) => (
+                            <Message
+                            text={msg}
+                            sender="u"
                         />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                            sender="U"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                            sender="A"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                            sender="U"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                            sender="A"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                            sender="U"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                            sender="A"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                            sender="U"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                            sender="A"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                            sender="U"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                            sender="A"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                            sender="U"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                            sender="A"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                            sender="U"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                            sender="A"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                            sender="U"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                            sender="A"
-                        />
-                        <Message
-                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                            sender="U"
-                        />
+                        ))}
                     </div>
                     <div className={css.choices}>
                         <div className={huy.choiceWrapper}>
                             <div
-                                onClick={(event) =>
-                                    setChoice("choice 1")
+                                onClick={() =>{
+                                    //setChoice("choice 1")
+                                    setmessage("cmth comes here")
+                                    updateHistory()
+                                }
                                 }
                             >
                                 choice 1
@@ -212,8 +155,10 @@ export default function Chat() {
                         </div>
                         <div className={huy.choiceWrapper}>
                             <div
-                                onClick={(event) =>
+                                onClick={() =>{
+
                                     setChoice("choice 2")
+                                }
                                 }
                             >
                                 choice 2

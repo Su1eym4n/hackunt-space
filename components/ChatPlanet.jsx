@@ -20,9 +20,6 @@ function ChatPlanet(props) {
 
   })
 
-
-  mesh.scale = 10
-
   return (
     <mesh ref={mesh} visible userData={{ test: "hello" }} position={[0, 0, 0]} castShadow>
       <sphereGeometry attach="geometry" args={[1, 16, 16]} />
