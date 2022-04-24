@@ -22,10 +22,9 @@ export default function Home() {
     <div className={css.container}>
 {/* head */}
       <Head>
-        <title>Mars</title>
+        <title>Final Frontier</title>
         <link rel="icon" href="/mars.png" />
         <link rel="stylesheet" href="https://use.typekit.net/lho8hpo.css"></link>
-      
       </Head>
 {/* navbar */}
       <div className={css.nav}>
@@ -33,7 +32,7 @@ export default function Home() {
         <div className={css.title}>FINAL FRONTIER</div>
         <div className={css.navLinkContainer}>
             <Link href="/chat"><div className={css.navLink}>Astronaut Chat</div></Link>
-            <Link href="/"><div className={css.navLink}>Home</div></Link>
+            <Link href="/"><div className={css.currentLink}>Home</div></Link>
         </div>
       </div>
 {/* body */}
@@ -73,27 +72,105 @@ export default function Home() {
         </div>
 {/* story cards */}
         <div className={css.info}>Stories</div>
-        <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="/mars.png"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Title
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    <iframe src='https://mars.nasa.gov/layout/embed/image/insightweather/' width='100%' height='100%'  scrolling='no' frameborder='0'></iframe>
+        <div className={css.stories}>
+
+          <div className={css.cols}>
+            <div className={css.rows}>
+              
+              <Card className={css.card}  sx={{ maxWidth: 500 }}>
+              <a href='https://www.nasa.gov/image-feature/night-skies-and-national-parks'>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="307"
+                image="/image 1.png"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                NASA and the National Park Service
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            </a>
+            </Card>
+            
+     
+           
+            <Card className={css.card} sx={{ maxWidth: 500 }}>
+            <a href='https://www.nasa.gov/image-feature/melba-roy-mouton-mathematician'>
+
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="307"
+                image="/image 2.png"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                Melba Roy Mouton – Mathematician
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            </a>
+            </Card>
+
+            </div>
+            <div className={css.rows}>
+
+            <Card className={css.card} sx={{ maxWidth: 500 }}>
+            <a href='https://www.nasa.gov/nasalive'>
+
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="307"
+                image="/image 6.png"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                NASA Live
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            </a>
+            </Card>
+          
+            
+
+      
+  
+            <Card className={css.card} sx={{ maxWidth: 500 }}>
+            <a href='https://www.instagram.com/nasahubble/'>
+
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="307"
+                image="/image 5.png"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                Hubble Collaboration
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            </a>
+            </Card>
+            </div>
+    
+
+            </div>
+          
+        
+        </div>
+        <div className={css.line}></div>
+        <div className={css.footer}>
+              &copy; 2022 Revengers Team
+        </div>
       </div>
+      
     </div>
+    
   )
 }
 

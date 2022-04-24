@@ -314,7 +314,7 @@ export default function Chat() {
         <img className={css.logo} src="/FINAL_FRONTIER_LOGO.png"/>
         <div className={css.title}>FINAL FRONTIER</div>
         <div className={css.navLinkContainer}>
-            <Link href="/chat"><div className={css.navLink}>Astronaut Chat</div></Link>
+            <Link href="/chat"><div className={css.currentLink}>Astronaut Chat</div></Link>
             <Link href="/"><div className={css.navLink}>Home</div></Link>
         </div>
     </div>   
