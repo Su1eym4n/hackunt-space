@@ -1,12 +1,14 @@
 import { Canvas } from '@react-three/fiber'
 import Head from 'next/head'
 import css from '../styles/Home.module.css'
-import TabBar from '../components/TabBar';
 import LightBulb from '../components/LightBulb'
 import ChatPlanet from '../components/ChatPlanet'
 import Choice from '../components/Choice';
 import Message from '../components/Message';
-import TypeAnim from '../components/TypeAnim';
+
+import Link from 'next/link'
+
+
 export default function Home() {
   return (
     <div className={css.container}>
@@ -20,7 +22,18 @@ export default function Home() {
       <div className={css.nav}>
         <img className={css.logo} src="/FINAL_FRONTIER_LOGO.png"/>
         <div className={css.title}>FINAL FRONTIER</div>
-        <TabBar className={css.tab}/>
+
+        <div className={css.navLinkContainer}>
+            <div className={css.navLinkTop}></div>
+
+            <Link href="/chat">
+              <div className={css.navLink}>Astronaut Chat</div>
+            </Link>
+            <Link href="/">
+              <div className={css.navLink}>Home</div>
+            </Link>
+            
+        </div>
       </div>
 {/* body */}
       <div className={css.body}>
@@ -31,16 +44,16 @@ export default function Home() {
           <div className={css.i2}>astronauts using Final Frontier.</div>
           </div>
          <div className={css.col2}>
-          <Canvas
+           <Canvas
               shadows={true}
               className={css.canvas2}
               camera={{
-              position: [2, 2, 2],
+              position: [1, 1,1],
               }}
           >
               <ambientLight color={"white"} intensity={0.2} />
               <LightBulb position={[0, 5, 3]} />
-              <ChatPlanet rotateX={5} rotateY={5} />
+              <ChatPlanet rotateAmount={0.01} rotateToX={500000}/>
               {/* <OrbitControls/> */}
           </Canvas>
          </div>

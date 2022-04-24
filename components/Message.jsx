@@ -5,12 +5,10 @@ import TypeAnim from './TypeAnim'
 const Message = ({ sender, text }) => {
     var prefix = ''
     if (sender == 'A') {
-        prefix = 'Astronaout: '
+        prefix = 'Ast: '
     } else {
         prefix = 'You: '
     }
-
-
     return (
         <div className={css.msgWrapper}>
             <div className={sender == 'A' ?css.textMessageA:css.textMessageU }>
@@ -24,5 +22,4 @@ const Message = ({ sender, text }) => {
 
     )
 }
-
 export default Message

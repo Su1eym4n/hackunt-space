@@ -1,19 +1,60 @@
+.navLinkContainer {
+  width: 65%;
+}
+
+.navLinkTop {
+  height: 6vh;
+  width: 100%;
+  float: left;
+}
+
+.navLink {
+  color: white;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: right;
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+.navLink:hover {
+  cursor: pointer;
+}
+
 .container{ 
-    width: 100vw;
-    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
 }
 
+.sideWrapper{
+    display: flex;
+    flex-direction: column;
+   
+}
 
-.history {
-    float: left;
-    width: 25%;
-    height: 100vh;
+.history {    
+    height: 70vh;
+    padding: 30px, 30px, 30px, 30px;
+    background: #1d3030;
+    border-style:solid;
+    border-width:3px;
+    border-color:#04663f;
+    box-shadow: 15px 15px 15px rgba(0,0,0);
+    overflow: auto;
+    width: 50%;
+    box-shadow: 0px 0px 40px 40px #03A062;
+    -moz-box-shadow:    inset 0 0 30px #03A062;
+    -webkit-box-shadow: inset 0 0 30px #03A062;
+    box-shadow:         inset 0 0 30px #03A062;
+
+}
+.choices{
     background: black;
-
+    padding: 30px, 30px, 30px, 30px;
 }
-
 .scene {
-    float: left;
     height: 75vh;
     width: 75vw;
     background-image: url('../public/stars.jpeg');
@@ -26,7 +67,6 @@
   }
   
   .title{
-    float: left;
     color: white;
     font-weight: bold;
     font-size: 2.5vw;
@@ -43,3 +83,5 @@
     margin-left: 4vw;
     margin-top: 4vh;
   }
+
+  

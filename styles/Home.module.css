@@ -1,3 +1,27 @@
+.navLinkContainer {
+  width: 60%;
+}
+
+.navLinkTop {
+  height: 6vh;
+  width: 100%;
+  float: left;
+}
+
+.navLink {
+  color: white;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: right;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+.navLink:hover {
+  cursor: pointer;
+}
+
 .container {
   background: linear-gradient(to bottom, transparent, black), url("../public/galaxy.mov");
   background-repeat: repeat-x;
@@ -9,9 +33,9 @@
   margin-left: 0.5rem;
 }
 
-.scene {
+.col2 {
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
 }
 
 .canvas {
@@ -22,13 +46,15 @@
   background: transparent;
 }
 
-.nav {
+.nav{
+
   display: flex;
   flex-direction: row;
   background: transparent;
 }
 
-.title {
+
+.title{
   float: left;
   color: white;
   font-weight: bold;
@@ -37,7 +63,6 @@
   padding-left: 1vw;
 }
 
-.tab {}
 
 .logo {
   font-size: 4vw;
@@ -47,7 +72,8 @@
 
 
 
-.choiceWrapper {
+.choiceWrapper{
+
   border-radius: 8px;
   background-color: #000;
   border-style: solid;
@@ -60,8 +86,12 @@
   font-size: 12px;
   margin: 4px 2px;
 }
-
-.msgWrapper {
+.choiceWrapper:hover{
+  border-color:coral;
+  color: coral;
+  cursor: pointer;
+}
+.msgWrapper{
   display: flex;
   flex-direction: row inline;
 }
