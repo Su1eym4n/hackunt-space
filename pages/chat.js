@@ -6,8 +6,8 @@ import LightBulb from '../components/LightBulb'
 import OrbitControls from '../components/OrbitControls'
 import ChatPlanet from '../components/ChatPlanet'
 import Button from '@mui/material/Button'
-import TabBar from '../components/TabBar';
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link'
 
 
 export default function Chat() {
@@ -59,7 +59,17 @@ export default function Chat() {
         <div className={huy.nav}>
             <img className={huy.logo} src="/FINAL_FRONTIER_LOGO.png"/>
             <div className={huy.title}>FINAL FRONTIER</div>
-            <TabBar className={huy.tab}/>
+            <div className={css.navLinkContainer}>
+            <div className={css.navLinkTop}></div>
+
+                <Link href="/chat">
+                <div className={css.navLink}>Astronaut Chat</div>
+                </Link>
+                <Link href="/">
+                <div className={css.navLink}>Home</div>
+                </Link>
+            
+            </div>
          </div>
             <div className={css.container}>
    
