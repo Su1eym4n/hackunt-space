@@ -1,44 +1,98 @@
-// import { Canvas as CanvasCSS3D, useFrame as useFrameCSS3D, useThree as useThreeCSS3D } from '@react-three/fiber'
-import Head from 'next/head'
 import { Canvas } from '@react-three/fiber'
-import css from "../styles/Home.module.css"
-import TabBar from '../components/TabBar';
-import Floor from "../components/Floor"
+import css from "../styles/Chat.module.css"
+import huy from "../styles/Home.module.css"
+import Message from '../components/Message';
 import LightBulb from '../components/LightBulb'
 import OrbitControls from '../components/OrbitControls'
 import ChatPlanet from '../components/ChatPlanet'
+import Button from '@mui/material/Button'
+import TabBar from '../components/TabBar';
+import React, { useState, useEffect } from 'react';
 
-import { CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer'
 
 export default function Chat() {
 
+    //Rotate speed can vary, X must get higher each stage
+    const stage1 = {
+        rotateSpeed: 0.01,
+        planetX: 1,
+    }
+    const stage2 = {
+        rotateSpeed: 0.01,
+        planetX: 2
+    }
+    const stage3 = {
+        rotateSpeed: 0.005,
+        planetX: 2.5
+    }
+    const stage4 = {
+        rotateSpeed: 0.02,
+        planetX: 3
+    }
+    const stage5 = {
+        rotateSpeed: 0.03,
+        planetX: 4
+    }
+    const stage6 = {
+        rotateSpeed: 0.01,
+        planetX: 40000
+    }
+
+    
+    const stages = [stage1, stage2, stage3, stage4, stage5, stage6]
+
+    const [currentStage, setStage] = useState(stage1)
+    const [currentIndex, setIndex]= useState(1)
+
+    const nextStage = () => {
+
+        if(currentIndex <= 5) {
+            setIndex(currentIndex+1)
+            console.log(currentIndex)
+            setStage( stages[currentIndex] )
+        }
+        
+    }
+
     return (
-     <>
-{/* head */}
-        <Head>
-            <link rel="stylesheet" href="https://use.typekit.net/lho8hpo.css"></link>
-        </Head>
-{/* navbar */}
-    <div className={css.nav}>
-        <img className={css.logo} src="/FINAL_FRONTIER_LOGO.png"/>
-        <div className={css.title}>FINAL FRONTIER</div>
-        <TabBar className={css.tab}/>
-      </div>
-{/* scene */}
-        <div className={css.scene}>
-        <Canvas
-            shadows={true}
-            className={css.canvas}
-            camera={{
-            position: [2, 2, 2],
-            }}
-        >
-            <ambientLight color={"white"} intensity={0.2} />
-            <LightBulb position={[0, 5, 3]} />
-            <ChatPlanet rotateX={5} rotateY={5} />
-            {/* <OrbitControls/> */}
-        </Canvas>
-    </div>
-    </>
+        <>
+        <div className={huy.nav}>
+            <img className={huy.logo} src="/FINAL_FRONTIER_LOGO.png"/>
+            <div className={huy.title}>FINAL FRONTIER</div>
+            <TabBar className={huy.tab}/>
+         </div>
+            <div className={css.container}>
+   
+                <div className={css.history}>
+                    History here
+                    <Button onClick={(event) => setStage(stage2)}>Click Me</Button>
+                    <Button onClick={(event) => setStage(stage1)}>stage1</Button>
+                    <Button onClick={(event) => nextStage() }>Next</Button>
+                    <Message
+                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru9tijokpti0u9t hrij4kogkrti0u9hir4nkljrkothi ren4kmlrgkogjnfhietink43mlokjtihnkm4l3kjoehienk5mhjongftk5sap"
+                        sender="A"
+                    />
+                    <Message
+                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
+                        sender="U"
+                    />
+                </div>
+                <div className={css.scene}>
+                    <Canvas
+                        shadows={true}
+                        className={css.canvas}
+                        camera={{
+                            position: [2, 2, 0],
+                        }}
+                    >
+                        <ambientLight color={"white"} intensity={0.1} />
+                        <LightBulb position={[0, 5, 3]} />
+                        <ChatPlanet rotateToX={currentStage.planetX} rotateAmount={currentStage.rotateSpeed} />
+                        {/* <OrbitControls/> */}
+                    </Canvas>
+                </div>
+
+            </div>
+        </>
     )
 }

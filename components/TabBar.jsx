@@ -1,9 +1,9 @@
-import React from 'react'
 import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { useRouter } from 'next/router'
+import { useState } from 'react';
 
 const StyledTabs = styled((props) => (
     <Tabs
@@ -39,17 +39,18 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
     }),
 );
 
-function TabBar() {
-    const [value, setValue] = React.useState(0);
+function TabBar({page}) {
+    console.log(page)
+    const [value, setValue] = useState(page);
     const routes = useRouter()
     const handleChange = (event, newValue) => {
         setValue(newValue);
         const link=''
-        if(value=="Home"){
-            link = '/'
-        }else{
-            link='/chat'
-        }
+         if(value=="Home"){
+             link = '/'
+         }else{
+             link='/chat'
+         }
         routes.push(link)
     };
     return (

@@ -154,4 +154,56 @@
 
 .body {
   color: white;
+  float: right;
+}
+
+.choiceWrapper{
+  border-radius: 8px;
+  background-color: #000;
+  border-style: solid;
+  border-color: #fafafa;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+}
+
+.msgWrapper{
+  display: flex;
+  flex-direction: row inline;
+}
+.textMessageA{
+  color:coral;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+}
+
+
+.textMessageU{
+  color: greenyellow;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+
+}
+
+.msg{
+  color:white;
+  padding: 7px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  overflow-wrap: break-word; 
 }

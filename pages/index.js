@@ -1,14 +1,12 @@
+import { Canvas } from '@react-three/fiber'
 import Head from 'next/head'
 import css from '../styles/Home.module.css'
-import { Canvas } from '@react-three/fiber'
-import RedPlanet from '../components/RedPlanet'
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import { useState } from 'react';
-import { styled } from '@mui/material/styles';
 import TabBar from '../components/TabBar';
 import LightBulb from '../components/LightBulb'
 import ChatPlanet from '../components/ChatPlanet'
+import Choice from '../components/Choice';
+import Message from '../components/Message';
+import TypeAnim from '../components/TypeAnim';
 export default function Home() {
   return (
     <div className={css.container}>
@@ -57,3 +55,4 @@ export default function Home() {
     </div>
   )
 }
+
