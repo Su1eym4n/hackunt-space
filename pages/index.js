@@ -39,30 +39,31 @@ export default function Home() {
       <div className={css.body}>
         <div className={css.intro}>
           <div className={css.col1}>
-          <div>Welcome Earthlings</div>
-          <div>Explore galaxies and communicate with astronauts using Final Frontier.</div>
+          <div className={css.i1}>Welcome Earthlings</div>
+          <div className={css.i2}>Explore galaxies and communicate with</div>
+          <div className={css.i2}>astronauts using Final Frontier.</div>
           </div>
          <div className={css.col2}>
-          <Canvas
+           <Canvas
               shadows={true}
               className={css.canvas2}
               camera={{
-              position: [2, 2, 2],
+              position: [1, 1,1],
               }}
           >
               <ambientLight color={"white"} intensity={0.2} />
               <LightBulb position={[0, 5, 3]} />
-              <ChatPlanet rotateX={5} rotateY={5} />
+              <ChatPlanet rotateAmount={0.01} rotateToX={500000}/>
               {/* <OrbitControls/> */}
           </Canvas>
          </div>
         </div>
         <div className={css.info}>Our Solar System by the Numbers</div>
         <div className={css.planets}>
-          <div className={css.col}> 8 planets</div>
-          <div className={css.col}> 200+ moons</div>
-          <div className={css.col}> 1,113,527 Asteroids</div>
-          <div className={css.col}> 3,743 Comets</div>
+          <div className={css.col}> <img className={css.img} src="/planet1.png"/> 8 <p className={css.text}>planets</p></div>
+          <div className={css.col}> <img className={css.img} src="/moon.png"/> 200+ <p className={css.text}>moons</p></div>
+          <div className={css.col}> <img className={css.img} src="/asteroid.png"/> 1,113,527 <p className={css.text}>Asteroids</p></div>
+          <div className={css.col}> <img className={css.img} src="/comet.png"/> 3,743 <p className={css.text}>Comets</p></div>
         </div>
       </div>
     </div>

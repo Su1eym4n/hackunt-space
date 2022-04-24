@@ -14,7 +14,7 @@
   padding-left: 15px;
   padding-right: 15px;
   float: right;
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-weight: bold;
 }
 
@@ -23,24 +23,26 @@
 }
 
 .container {
-  background-image: url("../public/galaxy.mov");
+  background: linear-gradient(to bottom, transparent, black), url("../public/galaxy.mov");
+  background-repeat: repeat-x;
   height: 100%;
 }
+
 .logo {
   height: 1em;
   margin-left: 0.5rem;
 }
 
-.scene{
-  width:100vw;
-  height:100vh;
+.col2 {
+  width: 100vw;
+  height: 70vh;
 }
 
-.canvas{
+.canvas {
   background: #000;
 }
 
-.canvas2{
+.canvas2 {
   background: transparent;
 }
 
@@ -62,8 +64,7 @@
 }
 
 
-
-.logo{
+.logo {
   font-size: 4vw;
   margin-left: 4vw;
   margin-top: 4vh;
@@ -94,8 +95,9 @@
   display: flex;
   flex-direction: row inline;
 }
-.textMessageA{
-  color:coral;
+
+.textMessageA {
+  color: coral;
   padding: 7px;
   text-align: center;
   text-decoration: none;
@@ -105,7 +107,7 @@
 }
 
 
-.textMessageU{
+.textMessageU {
   color: greenyellow;
   padding: 7px;
   text-align: center;
@@ -116,15 +118,15 @@
 
 }
 
-.msg{
-  color:white;
+.msg {
+  color: white;
   padding: 7px;
   text-align: left;
   text-decoration: none;
   display: inline-block;
   font-size: 13px;
   margin: 4px 2px;
-  overflow-wrap: break-word; 
+  overflow-wrap: break-word;
 }
 
 .body {
@@ -136,14 +138,27 @@
 .intro {
   display: flex;
   flex-direction: row;
+  padding-bottom: 45vh;
 }
 
 .col1 {
   display: flex;
   flex-direction: column;
 }
+
+.i1 {
+  font-size: 8vw;
+  font-weight: bold;
+}
+
+.i2 {
+  font-size: 1.5vw;
+}
+
 .info {
   padding-bottom: 3vh;
+  font-size: 3vw;
+  font-weight: bold;
 }
 
 .planets {
@@ -153,5 +168,20 @@
 }
 
 .col {
+  display: flex;
+  flex-direction: column;
   padding: 2vw;
+  font-size: 2vw;
+  font-weight: bold;
+  align-items: center;
+}
+
+.img {
+  width: 20vw;
+  padding-bottom: 3vh;
+}
+
+.text {
+  font-size: 1vw;
+  font-weight: regular;
 }
