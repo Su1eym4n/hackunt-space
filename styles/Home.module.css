@@ -1,16 +1,10 @@
 .navLinkContainer {
   width: 60%;
-}
-
-.navLinkTop {
-  height: 6vh;
-  width: 100%;
-  float: left;
+  margin-top: 6vh;
 }
 
 .navLink {
   color: white;
-  float: left;
   padding-left: 15px;
   padding-right: 15px;
   float: right;
@@ -23,14 +17,22 @@
 }
 
 .container {
-  background: linear-gradient(to bottom, transparent, transparent, black, black), url("../public/imposter.mp4");
+  background: linear-gradient(to bottom, transparent, transparent, black, black, black), url("../public/imposter.mp4");
   background-repeat: repeat-x;
   height: 100%;
 }
 
+@keyframes fade-in {
+  from {display: none;}
+  to {display: block;}
+}
+
 .logo {
+  animation: fade-in 1000ms;
   height: 1em;
-  margin-left: 0.5rem;
+  font-size: 4vw;
+  margin-left: 4vw;
+  margin-top: 4vh;
 }
 
 .col2 {
@@ -39,23 +41,16 @@
 }
 
 .canvas {
-  background: #000;
-}
-
-.canvas2 {
   background: transparent;
 }
 
 .nav{
-
   display: flex;
   flex-direction: row;
   background: transparent;
 }
 
-
 .title{
-  float: left;
   color: white;
   font-weight: bold;
   font-size: 2.5vw;
@@ -63,17 +58,7 @@
   padding-left: 1vw;
 }
 
-
-.logo {
-  font-size: 4vw;
-  margin-left: 4vw;
-  margin-top: 4vh;
-}
-
-
-
 .choiceWrapper{
-
   border-radius: 8px;
   background-color: #000;
   border-style: solid;
@@ -185,3 +170,4 @@
   font-size: 1vw;
   font-weight: regular;
 }
+

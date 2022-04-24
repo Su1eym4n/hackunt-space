@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import css from "../styles/Chat.module.css"
-import huy from "../styles/Home.module.css"
+import Head from 'next/head'
 import Message from '../components/Message';
 import LightBulb from '../components/LightBulb'
 import OrbitControls from '../components/OrbitControls'
@@ -122,22 +122,21 @@ export default function Chat() {
     }
     return (
         <>
-            <div className={huy.nav}>
-                <img className={huy.logo} src="/FINAL_FRONTIER_LOGO.png" />
-                <div className={huy.title}>FINAL FRONTIER</div>
-                <div className={css.navLinkContainer}>
-                    <div className={css.navLinkTop}></div>
-
-                    <Link href="/chat">
-                        <div className={css.navLink}>Astronaut Chat</div>
-                    </Link>
-                    <Link href="/">
-                        <div className={css.navLink}>Home</div>
-                    </Link>
-
-                </div>
-            </div>
-            <div className={css.container}>
+        <div className="background">
+        <Head>
+        <link rel="stylesheet" href="https://use.typekit.net/lho8hpo.css"></link>
+        </Head>
+{/* navbar */}
+    <div className={css.nav}>
+        <img className={css.logo} src="/FINAL_FRONTIER_LOGO.png"/>
+        <div className={css.title}>FINAL FRONTIER</div>
+        <div className={css.navLinkContainer}>
+            <Link href="/chat"><div className={css.navLink}>Astronaut Chat</div></Link>
+            <Link href="/"><div className={css.navLink}>Home</div></Link>
+        </div>
+    </div>   
+{/* body */}
+<div className={css.container}>
                 <div className={css.sideWrapper}>
                     <div className={css.avatar}>
                         Astronaut
@@ -155,7 +154,7 @@ export default function Chat() {
                         ))}
                     </div>
                     <div className={css.choices}>
-                        <div className={huy.choiceWrapper}>
+                        <div className={css.choiceWrapper}>
                             <div
                                 onClick={() =>{
                                     //setChoice("choice 1")
@@ -169,7 +168,7 @@ export default function Chat() {
                                 choice 1
                             </div>
                         </div>
-                        <div className={huy.choiceWrapper}>
+                        <div className={css.choiceWrapper}>
                             <div
                                 onClick={() =>{
 
@@ -180,25 +179,30 @@ export default function Chat() {
                                 choice 2
                             </div>
                         </div>
+                        {/* planet */}
+            
                     </div>
-                </div>
+            
 
-                <div className={css.scene}>
-                    <Canvas
-                        shadows={true}
-                        className={css.canvas}
-                        camera={{
-                            position: [2, 2, 0],
-                        }}
-                    >
-                        <ambientLight color={"white"} intensity={0.1} />
-                        <LightBulb position={[0, 5, 3]} />
-                        <ChatPlanet rotateToX={currentStage.planetX} rotateAmount={currentStage.rotateSpeed} />
-                        {/* <OrbitControls/> */}
-                    </Canvas>
-                </div>
-
+        </div>
+        <div className={css.scene}>
+                <Canvas
+                    shadows={true}
+                    className={css.canvas}
+                    camera={{
+                        position: [2, 2, 0],
+                    }}
+                >
+                    <ambientLight color={"white"} intensity={0.1} />
+                    <LightBulb position={[0, 5, 3]} />
+                    <ChatPlanet rotateToX={currentStage.planetX} rotateAmount={currentStage.rotateSpeed} />
+                    {/* <OrbitControls/> */}
+                </Canvas>
             </div>
-        </>
+        </div>
+        
+        </div>
+           
+    </>
     )
 }

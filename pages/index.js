@@ -17,45 +17,40 @@ import Link from 'next/link'
 
 export default function Home() {
 
-  const request = "https://api.nasa.gov/planetary/apod?api_key=0rZgaDxNeqawt5pnMel53tBoNK5JLSD9kRaXDw4E"
-  
   return (
+    
     <div className={css.container}>
 {/* head */}
       <Head>
         <title>Mars</title>
         <link rel="icon" href="/mars.png" />
         <link rel="stylesheet" href="https://use.typekit.net/lho8hpo.css"></link>
+      
       </Head>
 {/* navbar */}
       <div className={css.nav}>
         <img className={css.logo} src="/FINAL_FRONTIER_LOGO.png"/>
         <div className={css.title}>FINAL FRONTIER</div>
-
         <div className={css.navLinkContainer}>
-            <div className={css.navLinkTop}></div>
-
-            <Link href="/chat">
-              <div className={css.navLink}>Astronaut Chat</div>
-            </Link>
-            <Link href="/">
-              <div className={css.navLink}>Home</div>
-            </Link>
-            
+            <Link href="/chat"><div className={css.navLink}>Astronaut Chat</div></Link>
+            <Link href="/"><div className={css.navLink}>Home</div></Link>
         </div>
       </div>
 {/* body */}
       <div className={css.body}>
+        {/* main text and planet */}
         <div className={css.intro}>
+          {/* main text */}
           <div className={css.col1}>
           <div className={css.i1}>Welcome Earthlings</div>
           <div className={css.i2}>Explore galaxies and communicate with</div>
           <div className={css.i2}>astronauts using Final Frontier.</div>
-          </div>
+        </div>
+        {/* planet */}
          <div className={css.col2}>
            <Canvas
               shadows={true}
-              className={css.canvas2}
+              className={css.canvas}
               camera={{
               position: [1, 1,1],
               }}
@@ -67,6 +62,8 @@ export default function Home() {
           </Canvas>
          </div>
         </div>
+{/* mars weather */}
+{/* number facts */}
         <div className={css.info}>Our Solar System by the Numbers</div>
         <div className={css.planets}>
           <div className={css.col}> <img className={css.img} src="/planet1.png"/> 8 <p className={css.text}>Planets</p></div>
