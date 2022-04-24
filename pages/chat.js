@@ -86,11 +86,25 @@ export default function Chat() {
     const [currentStage, setStage] = useState(stage1)
     const [currentIndex, setIndex] = useState(1)
 
+
+
     //set the choice
     const [choice, setChoice] = useState('')
     //to update feed
     const [feed, updateFeed] = useState(['Hello, I am Mr. Astronaut. It is so nice to meet you!'])
     const [message, setmessage] = useState('')
+
+    //Handle nodes
+    const [currentNode, setCurrentNode] = useState(list.head)
+
+    const handleNode = ()=>{
+        if(currentNode.next!==null){
+            console.log("aà"+currentNode.next.data)
+            setCurrentNode(currentNode.next)
+        }else{
+
+        }
+    }
 
 
     const nextStage = () => {
@@ -145,8 +159,10 @@ export default function Chat() {
                             <div
                                 onClick={() =>{
                                     //setChoice("choice 1")
-                                    setmessage("cmth comes here")
+                                    setmessage("smth comes here")
+                                    console.log("message"+message)
                                     updateHistory()
+                                    handleNode()
                                 }
                                 }
                             >
