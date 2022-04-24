@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
@@ -7,9 +7,8 @@ function ChatPlanet(props) {
   // Direct access to mesh
   const mesh = useRef()
 
-  const [colorMap, normalMap, bumpMap] = useLoader(TextureLoader, [
+  const [colorMap] = useLoader(TextureLoader, [
     'mars.jpg',
-    'mars_normal.jpg'
     ])
 
   useFrame(() => {
@@ -19,8 +18,6 @@ function ChatPlanet(props) {
     }
 
   })
-
-
   
 
   return (
@@ -28,7 +25,6 @@ function ChatPlanet(props) {
       <sphereGeometry attach="geometry" args={[1, 16, 16]} />
       <meshStandardMaterial
         map={colorMap}
-        normalMap={normalMap}
 
         attach="material"
         color=""
