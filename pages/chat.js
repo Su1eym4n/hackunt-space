@@ -37,11 +37,6 @@ export default function Chat() {
         planetX: 40000
     }
 
-<<<<<<< HEAD
-
-
-    const [currentStage, setStage] = useState(stage1)
-=======
     
     const stages = [stage1, stage2, stage3, stage4, stage5, stage6]
 
@@ -57,7 +52,6 @@ export default function Chat() {
         }
         
     }
->>>>>>> be29ec7c80ac88213a41646ee8433513fea6fc8e
 
     return (
         <>
@@ -65,9 +59,9 @@ export default function Chat() {
 
                 <div className={css.history}>
                     History here
-<<<<<<< HEAD
                     <Button onClick={(event) => setStage(stage2)}>Click Me</Button>
                     <Button onClick={(event) => setStage(stage1)}>stage1</Button>
+                    <Button onClick={(event) => nextStage() }>Next</Button>
                     <Message
                         text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru9tijokpti0u9t hrij4kogkrti0u9hir4nkljrkothi ren4kmlrgkogjnfhietink43mlokjtihnkm4l3kjoehienk5mhjongftk5sap"
                         sender="A"
@@ -76,11 +70,6 @@ export default function Chat() {
                         text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
                         sender="U"
                     />
-=======
-                    <Button onClick={ (event) => setStage(stage2) }>Click Me</Button>
-                    <Button onClick={ (event) => setStage(stage1) }>stage1</Button>
-                    <Button onClick={ (event) => nextStage() }>nextStage</Button>
->>>>>>> be29ec7c80ac88213a41646ee8433513fea6fc8e
                 </div>
                 <div className={css.scene}>
                     <Canvas
