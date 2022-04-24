@@ -13,21 +13,15 @@ export default function Chat() {
 
     const stage1 = {
         rotateAmount: 0.01,
-        planetX: 5,
+        planetX: 1,
         planetY: 6
 
     }
     const stage2 = {
-        rotateAmount: 0.00,
-        planetX: 0,
+        rotateAmount: 0.03,
+        planetX: 3,
         planetY: 0
     }
-
-
-
-
-    
-
 
 
     const [currentStage, setStage] = useState(stage1)
