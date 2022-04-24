@@ -15,9 +15,7 @@ function ChatPlanet(props) {
   useFrame(() => {
 
     if(mesh.current.rotation.x < props.rotateToX) {
-      console.log(mesh.current.rotation.x)
       mesh.current.rotation.x += props.rotateAmount
-
     }
 
   })
