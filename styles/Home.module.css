@@ -193,3 +193,11 @@ border-bottom: solid #ae45ff;
   border-top: 2px solid;
   padding-bottom: 4vh;
 }*/
+
+.msg {
+  padding: 1vw;
+}
+
+.textMessageA, .textMessageU {
+  color: blue;
+}

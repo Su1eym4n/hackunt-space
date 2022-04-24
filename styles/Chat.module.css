@@ -129,6 +129,15 @@
     flex-direction: row inline;
   }
   
+.history {
+    color: white;
+    padding: 3vw;
+}
+
+.message {
+    padding: 3vw;
+}
+
   .textMessageA {
     color: coral;
     padding: 7px;
@@ -160,4 +169,5 @@
     font-size: 13px;
     margin: 4px 2px;
     overflow-wrap: break-word;
+    padding-bottom: 3vw;
   }

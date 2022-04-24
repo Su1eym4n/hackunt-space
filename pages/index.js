@@ -20,6 +20,7 @@ export default function Home() {
   return (
     
     <div className={css.container}>
+      <video src={`${process.env.PUBLIC_URL}/public/imposter.mp4`} autoPlay muted loop className="myVideo"></video>
 {/* head */}
       <Head>
         <title>Final Frontier</title>

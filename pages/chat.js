@@ -325,12 +325,10 @@ export default function Chat() {
                         Astronaut
                     </div>
                     <div className={css.history}>
-                        <Button onClick={(event) => setStage(stage2)}>Click Me</Button>
-                        <Button onClick={(event) => setStage(stage1)}>stage1</Button>
-                        <Button onClick={(event) => nextStage()}>Next</Button>
                         {feed.map((msg, index) => (
-                            <Message
+                            <Message 
                             text={msg}
+                            key={index}
                             sender={senderFlipFlop()}
                         />
                         ))}

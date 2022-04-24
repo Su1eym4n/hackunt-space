@@ -11,7 +11,7 @@ const Message = ({ sender, text }) => {
     }
     return (
         <div className={css.msgWrapper}>
-            <div className={sender == 'A' ?css.textMessageA:css.textMessageU }>
+            <div className={ sender == 'A' ?css.textMessageA:css.textMessageU }>
                 {prefix}
             </div>
             <div className={css.msg}>
