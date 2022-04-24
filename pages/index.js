@@ -56,7 +56,7 @@ export default function Home() {
               }}
           >
               <ambientLight color={"white"} intensity={0.2} />
-              <LightBulb position={[0, 5, 3]} />
+              <LightBulb position={[0, 2, 0]} />
               <ChatPlanet rotateAmount={0.0075} rotateToX={500000}/>
               <OrbitControls/> 
           </Canvas>
@@ -91,6 +91,7 @@ export default function Home() {
         </CardContent>
       </CardActionArea>
     </Card>
+    <iframe src='https://mars.nasa.gov/layout/embed/image/insightweather/' width='100%' height='100%'  scrolling='no' frameborder='0'></iframe>
       </div>
     </div>
   )
