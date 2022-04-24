@@ -33,7 +33,7 @@ border-bottom: solid #ae45ff;
 .container {
   
   /* background-image: url("../public/imposter.mp4"); */
-  background-image: linear-gradient(to bottom, transparent, transparent, black, black, black, black), url("../public/imposter.mp4");
+  background-image: linear-gradient(to bottom, transparent, transparent, black, black, black, black, black), url("../public/imposter.mp4");
   -webkit-animation: gradient 5s;
   background-repeat: repeat-x;
   height: 100%;

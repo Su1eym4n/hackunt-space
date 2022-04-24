@@ -20,7 +20,6 @@ export default function Home() {
   return (
     
     <div className={css.container}>
-      <video src={`${process.env.PUBLIC_URL}/public/imposter.mp4`} autoPlay muted loop className="myVideo"></video>
 {/* head */}
       <Head>
         <title>Final Frontier</title>
@@ -84,7 +83,7 @@ export default function Home() {
               <CardMedia
                 component="img"
                 height="307"
-                image="/image 1.png"
+                image="https://www.nasa.gov/sites/default/files/thumbnails/image/us_lights2.jpg"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -104,7 +103,7 @@ export default function Home() {
               <CardMedia
                 component="img"
                 height="307"
-                image="/image 2.png"
+                image="https://www.nasa.gov/sites/default/files/thumbnails/image/9467783474_7a574ec7bb_o.jpg"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -119,17 +118,17 @@ export default function Home() {
             <div className={css.rows}>
 
             <Card className={css.card} sx={{ maxWidth: 500 }}>
-            <a href='https://www.nasa.gov/nasalive'>
+            <a href='https://www.nasa.gov/image-feature/astronaut-kayla-barron-poses-for-a-portrait-during-maintenance-work'>
 
             <CardActionArea>
               <CardMedia
                 component="img"
                 height="307"
-                image="/image 6.png"
+                image="https://www.nasa.gov/sites/default/files/thumbnails/image/iss067e014525.jpg"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                NASA Live
+                Space Station Maintenance
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -141,17 +140,17 @@ export default function Home() {
       
   
             <Card className={css.card} sx={{ maxWidth: 500 }}>
-            <a href='https://www.instagram.com/nasahubble/'>
+            <a href='https://www.nasa.gov/mission_pages/shuttle/sts1/sts1_25.html'>
 
             <CardActionArea>
               <CardMedia
                 component="img"
                 height="307"
-                image="/image 5.png"
+                image="https://www.nasa.gov/images/content/144826main_sts1_launch_full.jpg"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                Hubble Collaboration
+                The Boldest Test Flight in History
                 </Typography>
               </CardContent>
             </CardActionArea>
