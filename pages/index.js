@@ -10,6 +10,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import OrbitControls from '../components/OrbitControls'
 
 import Link from 'next/link'
 
@@ -62,7 +63,7 @@ export default function Home() {
               <ambientLight color={"white"} intensity={0.2} />
               <LightBulb position={[0, 5, 3]} />
               <ChatPlanet rotateAmount={0.0075} rotateToX={500000}/>
-              {/* <OrbitControls/> */}
+              <OrbitControls/> 
           </Canvas>
          </div>
         </div>
