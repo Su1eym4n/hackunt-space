@@ -73,7 +73,7 @@ export default function Chat() {
             </div>
          </div>
             <div className={css.container}>
-                <div classname={css.sideWrapper}>
+                <div className={css.sideWrapper}>
                     <div className={css.history}>
                         History here
                         <Button onClick={(event) => setStage(stage2)}>Click Me</Button>

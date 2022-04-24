@@ -21,7 +21,7 @@ function ChatPlanet(props) {
   })
 
 
-  mesh.scale = 10
+  
 
   return (
     <mesh ref={mesh} visible userData={{ test: "hello" }} position={[0, 0, 0]} castShadow>
