@@ -19,12 +19,11 @@ export default function Chat() {
             <link rel="stylesheet" href="https://use.typekit.net/lho8hpo.css"></link>
         </Head>
 {/* navbar */}
-        <div className={css.nav}>
-            <div className={css.title}>
-            Final Frontier
-            </div>
-            <TabBar className={css.tab}/>
-        </div>
+    <div className={css.nav}>
+        <img className={css.logo} src="/FINAL_FRONTIER_LOGO.png"/>
+        <div className={css.title}>FINAL FRONTIER</div>
+        <TabBar className={css.tab}/>
+      </div>
 {/* scene */}
         <div className={css.scene}>
         <Canvas
