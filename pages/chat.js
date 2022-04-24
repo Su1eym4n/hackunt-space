@@ -1,11 +1,12 @@
 import { Canvas } from '@react-three/fiber'
 import css from "../styles/Chat.module.css"
+import huy from "../styles/Home.module.css"
 import Message from '../components/Message';
 import LightBulb from '../components/LightBulb'
 import OrbitControls from '../components/OrbitControls'
 import ChatPlanet from '../components/ChatPlanet'
 import Button from '@mui/material/Button'
-
+import TabBar from '../components/TabBar';
 import React, { useState, useEffect } from 'react';
 
 
@@ -55,8 +56,13 @@ export default function Chat() {
 
     return (
         <>
+        <div className={huy.nav}>
+            <img className={huy.logo} src="/FINAL_FRONTIER_LOGO.png"/>
+            <div className={huy.title}>FINAL FRONTIER</div>
+            <TabBar className={huy.tab}/>
+         </div>
             <div className={css.container}>
-
+   
                 <div className={css.history}>
                     History here
                     <Button onClick={(event) => setStage(stage2)}>Click Me</Button>

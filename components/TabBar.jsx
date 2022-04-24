@@ -42,16 +42,16 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
 function TabBar({page}) {
     console.log(page)
     const [value, setValue] = useState(page);
-
+    const routes = useRouter()
     const handleChange = (event, newValue) => {
         setValue(newValue);
         const link=''
-        // if(value=="Home"){
-        //     link = '/'
-        // }else{
-        //     link='/chat'
-        // }
-        //routes.push(link)
+         if(value=="Home"){
+             link = '/'
+         }else{
+             link='/chat'
+         }
+        routes.push(link)
     };
     return (
         <StyledTabs

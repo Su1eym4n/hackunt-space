@@ -1,6 +1,5 @@
 .container {
-  padding: 0 2rem;
-  background-color:black;
+  background-image: url("/galaxy.mov");
 }
 
 .main {
@@ -125,20 +124,36 @@
   background: #000;
 }
 
+.canvas2{
+  background: transparent;
+}
+
 .nav{
   display: flex;
-  flex-direction: row inline;
-  background-color: black;
-
+  flex-direction: row;
+  background: transparent;
 }
 
 .title{
   float: left;
   color: white;
   font-weight: bold;
+  font-size: 2.5vw;
+  margin-top: 5vh;
+  padding-left: 1vw;
 }
 
 .tab{
+}
+
+.logo{
+  font-size: 4vw;
+  margin-left: 4vw;
+  margin-top: 4vh;
+}
+
+.body {
+  color: white;
   float: right;
 }
 

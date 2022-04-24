@@ -3,6 +3,7 @@
     height: 100vh;
 }
 
+
 .history {
     float: left;
     width: 25%;
@@ -20,3 +21,28 @@
     width: 75vw;
     background-image: url('../public/stars.jpeg');
 }
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+  }
+  
+  .title{
+    float: left;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5vw;
+    margin-top: 5vh;
+    padding-left: 1vw;
+  }
+  .logo {
+    height: 1em;
+    margin-left: 0.5rem;
+  }
+
+  .logo{
+    font-size: 4vw;
+    margin-left: 4vw;
+    margin-top: 4vh;
+  }
