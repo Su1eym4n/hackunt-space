@@ -44,7 +44,7 @@ export default function Home() {
           </Canvas>
          </div>
         </div>
-        <div>Our Solar System by the Numbers</div>
+        <div className={css.info}>Our Solar System by the Numbers</div>
         <div className={css.planets}>
           <div className={css.col}> 8 planets</div>
           <div className={css.col}> 200+ moons</div>

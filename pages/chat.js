@@ -63,7 +63,7 @@ export default function Chat() {
                 <TabBar className={huy.tab} />
             </div>
             <div className={css.container}>
-                <div>
+                <div classname={css.sideWrapper}>
                     <div className={css.history}>
                         History here
                         <Button onClick={(event) => setStage(stage2)}>Click Me</Button>
