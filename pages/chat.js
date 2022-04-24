@@ -86,11 +86,30 @@ export default function Chat() {
     const [currentStage, setStage] = useState(stage1)
     const [currentIndex, setIndex] = useState(1)
 
+
+
     //set the choice
     const [choice, setChoice] = useState('')
     //to update feed
     const [feed, updateFeed] = useState(['Hello, I am Mr. Astronaut. It is so nice to meet you!'])
-    const [message, setmessage] = useState('')
+    const [message, setmessage] = useState('init')
+
+    //Handle nodes
+    const [currentNode, setCurrentNode] = useState(list.head)
+
+    const handleNode = ()=>{
+        if(currentNode.next != null){
+            console.log("aà"+currentNode.next.data)
+            setCurrentNode(currentNode.next)
+        }else{
+            const opt1 = currentNode.next1.data
+            const opt2 = currentNode.next2.data
+            console.log(opt1)
+            console.log(opt2)
+  
+
+        }
+    }
 
 
     const nextStage = () => {
@@ -144,23 +163,30 @@ export default function Chat() {
                             <div
                                 onClick={() =>{
                                     //setChoice("choice 1")
-                                    setmessage("cmth comes here")
+                                    setmessage(currentNode.data)
+                                    console.log("message"+message)
                                     updateHistory()
+                                    handleNode()
+                                    setCurrentNode(currentNode.next1)
+
                                 }
                                 }
                             >
-                                choice 1
+                                {message}
                             </div>
                         </div>
                         <div className={css.choiceWrapper}>
                             <div
                                 onClick={() =>{
-
-                                    setChoice("choice 2")
+                                    setmessage(currentNode.data)
+                                    console.log("message"+message)
+                                    updateHistory()
+                                    handleNode()
+                                    setCurrentNode(currentNode.next2)
                                 }
                                 }
                             >
-                                choice 2
+                                {message}
                             </div>
                         </div>
                         {/* planet */}
