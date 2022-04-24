@@ -3,7 +3,11 @@ import css from '../styles/Home.module.css'
 const Choice = ({ text }) => {
     return (
         <div className={css.choiceWrapper}>
-            <div>
+            <div
+            onClick={()=>
+                console.log("dd")
+            } 
+            >
                 {text}
             </div>
         </div>

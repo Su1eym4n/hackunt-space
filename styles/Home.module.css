@@ -45,6 +45,7 @@
 }
 
 .nav{
+
   display: flex;
   flex-direction: row;
   background: transparent;
@@ -60,8 +61,7 @@
   padding-left: 1vw;
 }
 
-.tab{
-}
+
 
 .logo{
   font-size: 4vw;
@@ -72,6 +72,7 @@
 
 
 .choiceWrapper{
+
   border-radius: 8px;
   background-color: #000;
   border-style: solid;
@@ -84,7 +85,11 @@
   font-size: 12px;
   margin: 4px 2px;
 }
-
+.choiceWrapper:hover{
+  border-color:coral;
+  color: coral;
+  cursor: pointer;
+}
 .msgWrapper{
   display: flex;
   flex-direction: row inline;

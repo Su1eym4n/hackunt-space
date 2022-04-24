@@ -8,6 +8,7 @@ import ChatPlanet from '../components/ChatPlanet'
 import Button from '@mui/material/Button'
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
+import Choice from '../components/Choice';
 
 
 export default function Chat() {
@@ -38,20 +39,20 @@ export default function Chat() {
         planetX: 40000
     }
 
-    
+
     const stages = [stage1, stage2, stage3, stage4, stage5, stage6]
 
     const [currentStage, setStage] = useState(stage1)
-    const [currentIndex, setIndex]= useState(1)
+    const [currentIndex, setIndex] = useState(1)
 
     const nextStage = () => {
 
-        if(currentIndex <= 5) {
-            setIndex(currentIndex+1)
+        if (currentIndex <= 5) {
+            setIndex(currentIndex + 1)
             console.log(currentIndex)
-            setStage( stages[currentIndex] )
+            setStage(stages[currentIndex])
         }
-        
+
     }
 
     return (
@@ -72,21 +73,95 @@ export default function Chat() {
             </div>
          </div>
             <div className={css.container}>
-   
-                <div className={css.history}>
-                    History here
-                    <Button onClick={(event) => setStage(stage2)}>Click Me</Button>
-                    <Button onClick={(event) => setStage(stage1)}>stage1</Button>
-                    <Button onClick={(event) => nextStage() }>Next</Button>
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru9tijokpti0u9t hrij4kogkrti0u9hir4nkljrkothi ren4kmlrgkogjnfhietink43mlokjtihnkm4l3kjoehienk5mhjongftk5sap"
-                        sender="A"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                        sender="U"
-                    />
+                <div classname={css.sideWrapper}>
+                    <div className={css.history}>
+                        History here
+                        <Button onClick={(event) => setStage(stage2)}>Click Me</Button>
+                        <Button onClick={(event) => setStage(stage1)}>stage1</Button>
+                        <Button onClick={(event) => nextStage()}>Next</Button>
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
+                            sender="A"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
+                            sender="U"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
+                            sender="A"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
+                            sender="U"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
+                            sender="A"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
+                            sender="U"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
+                            sender="A"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
+                            sender="U"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
+                            sender="A"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
+                            sender="U"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
+                            sender="A"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
+                            sender="U"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
+                            sender="A"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
+                            sender="U"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
+                            sender="A"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
+                            sender="U"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
+                            sender="A"
+                        />
+                        <Message
+                            text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
+                            sender="U"
+                        />
+                    </div>
+                    <div className={css.choices}>
+                        <Choice
+                            text="Greet"
+                        />
+                        <Choice
+                            text="Ask who t f asked"
+                        />
+                    </div>
                 </div>
+
                 <div className={css.scene}>
                     <Canvas
                         shadows={true}
