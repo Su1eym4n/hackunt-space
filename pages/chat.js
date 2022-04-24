@@ -92,7 +92,7 @@ export default function Chat() {
     const [choice, setChoice] = useState('')
     //to update feed
     const [feed, updateFeed] = useState(['Hello, I am Mr. Astronaut. It is so nice to meet you!'])
-    const [message, setmessage] = useState('')
+    const [message, setmessage] = useState('init')
 
     //Handle nodes
     const [currentNode, setCurrentNode] = useState(list.head)
