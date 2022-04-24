@@ -23,7 +23,7 @@
 }
 
 .container {
-  background: linear-gradient(to bottom, transparent, black), url("../public/galaxy.mov");
+  background: linear-gradient(to bottom, transparent, transparent, black, black), url("../public/imposter.mp4");
   background-repeat: repeat-x;
   height: 100%;
 }
