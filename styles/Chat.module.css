@@ -31,8 +31,9 @@
 }
 
 .navLink:hover, .currentLink:hover {
-  cursor: pointer;
-}
+    cursor: pointer;
+    opacity: 80%;
+  }
 
 .currentLink {
     color: white;

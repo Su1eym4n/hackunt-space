@@ -25,8 +25,9 @@ width: fit-content;
 border-bottom: solid #ae45ff;
 }
 
-.navLink:hover {
+.navLink:hover, .currentLink:hover {
   cursor: pointer;
+  opacity: 80%;
 }
 
 .container {
