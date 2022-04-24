@@ -10,6 +10,47 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
 import Choice from '../components/Choice';
 
+class ListNode {
+    constructor(data) {
+        this.data = data
+        this.next = null
+        this.next1 = null
+        this.next2 = null
+    }
+}
+
+class LinkedList {
+    constructor(head = null) {
+        this.head = head
+    }
+}
+
+let ast1 = new ListNode("Hello, I am Mr. Astronaut. It is so nice to meet you!")
+let resp1_1 = new ListNode("Nice to you meet you too! Can you tell me more about daily life in space?")
+let resp1_2 = new ListNode("What are you doing in space?")
+ast1.next1 = resp1_1
+ast1.next2 = resp1_2
+
+// ------ AST 2 - 1
+let ast2_1 = new ListNode("Living in space is not the same as living on Earth. Many things are different. Our bodies change in space. The way we stay clean and neat is different too. ")
+resp1_1.next = ast2_1
+
+
+let resp2_1_1 = new ListNode("How do your bodies change in space? ")
+let resp2_1_2 = new ListNode("What do astronauts do to keep the space ship clean?")
+ast2_1.next1 = resp2_1_1
+ast2_1.next2 = resp2_1_2
+
+// ------ AST 2 - 2
+let ast2_2 = new ListNode("I am on an exploration mission of Mars. Did you know there have been nine successful US Mars landings? They were Viking 1 and Viking 2 (both 1976), Pathfinder (1997), Spirit and Opportunity (both 2004), Phoenix (2008), Curiosity (2012), InSight (2018) and Perseverance (2021).")
+resp1_2.next = ast2_2
+
+let resp2_2_1 = new ListNode("Wow, Mars huh? Tell me more… ")
+let resp2_2_2 = new ListNode("You should explore a cooler planet like Jupiter.")
+ast2_2.next1 = resp2_2_1
+ast2_2.next2 = resp2_2_2
+
+let list = new LinkedList(ast1)
 
 export default function Chat() {
 
@@ -45,6 +86,13 @@ export default function Chat() {
     const [currentStage, setStage] = useState(stage1)
     const [currentIndex, setIndex] = useState(1)
 
+    //set the choice
+    const [choice, setChoice] = useState('')
+    //to update feed
+    const [feed, updateFeed] = useState(['Hello, I am Mr. Astronaut. It is so nice to meet you!'])
+    const [message, setmessage] = useState('')
+
+
     const nextStage = () => {
 
         if (currentIndex <= 5) {
@@ -54,7 +102,10 @@ export default function Chat() {
         }
 
     }
-
+    const updateHistory = ()=>{
+        updateFeed(prevState => [...prevState, message])
+        console.log(feed)
+    }
     return (
         <>
         <div className="background">
@@ -71,95 +122,54 @@ export default function Chat() {
         </div>
     </div>   
 {/* body */}
-        <div className={css.container}>
-            {/* messages */}
-            <div classname={css.sideWrapper}>
-                <div className={css.history}>
-                    History here
-                    <Button onClick={(event) => setStage(stage2)}>Click Me</Button>
-                    <Button onClick={(event) => setStage(stage1)}>stage1</Button>
-                    <Button onClick={(event) => nextStage()}>Next</Button>
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                        sender="A"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                        sender="U"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                        sender="A"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                        sender="U"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                        sender="A"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                        sender="U"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                        sender="A"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                        sender="U"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                        sender="A"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                        sender="U"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                        sender="A"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                        sender="U"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                        sender="A"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                        sender="U"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                        sender="A"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                        sender="U"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8rhijohru 9tijokpti0u9t hrij4kogkrti0 u9hir4nkljrkothi ren4kmlrgkogjnf hietink43mlokjtihnkm4 l3kjoehienk5m hjongftk5sap"
-                        sender="A"
-                    />
-                    <Message
-                        text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
-                        sender="U"
-                    />
-                </div>
-                {/* buttons */}
-                <div className={css.choices}>
-                    <Choice text="Greet"/>
-                    <Choice text="Ask who t f asked"/>
-                </div>
-            </div>
-            {/* planet */}
-            <div className={css.scene}>
+<div className={css.container}>
+                <div className={css.sideWrapper}>
+                    <div className={css.avatar}>
+                        Astronaut
+                    </div>
+                    <div className={css.history}>
+                        History here
+                        <Button onClick={(event) => setStage(stage2)}>Click Me</Button>
+                        <Button onClick={(event) => setStage(stage1)}>stage1</Button>
+                        <Button onClick={(event) => nextStage()}>Next</Button>
+                        {feed.map((msg, index) => (
+                            <Message
+                            text={msg}
+                            sender="u"
+                        />
+                        ))}
+                    </div>
+                    <div className={css.choices}>
+                        <div className={css.choiceWrapper}>
+                            <div
+                                onClick={() =>{
+                                    //setChoice("choice 1")
+                                    setmessage("cmth comes here")
+                                    updateHistory()
+                                }
+                                }
+                            >
+                                choice 1
+                            </div>
+                        </div>
+                        <div className={css.choiceWrapper}>
+                            <div
+                                onClick={() =>{
+
+                                    setChoice("choice 2")
+                                }
+                                }
+                            >
+                                choice 2
+                            </div>
+                        </div>
+                        {/* planet */}
+            
+                    </div>
+            
+
+        </div>
+        <div className={css.scene}>
                 <Canvas
                     shadows={true}
                     className={css.canvas}
@@ -173,10 +183,10 @@ export default function Chat() {
                     {/* <OrbitControls/> */}
                 </Canvas>
             </div>
-
         </div>
+        
         </div>
-       
+           
     </>
     )
 }

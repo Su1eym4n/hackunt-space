@@ -49,6 +49,13 @@
 
 .history{    
     margin-top: 4vh;
+
+   
+}
+.avatar{
+    color: cyan;
+}
+.history {    
     height: 70vh;
     width: 30vw;
     /* padding: 30px, 30px, 30px, 30px; */
