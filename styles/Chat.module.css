@@ -10,7 +10,10 @@
     background: black;
 
 }
-
+.choices{
+    height: 100vh;
+    background: black;
+}
 .scene {
     float: left;
     height: 75vh;

@@ -32,7 +32,6 @@ export default function Home() {
       sender="a"
       />
 {/* body */}
- 
 
     </div>
   )
