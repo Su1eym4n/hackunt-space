@@ -1,6 +1,31 @@
+.navLinkContainer {
+  width: 65%;
+}
+
+.navLinkTop {
+  height: 6vh;
+  width: 100%;
+  float: left;
+}
+
+.navLink {
+  color: white;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: right;
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+.navLink:hover {
+  cursor: pointer;
+}
+
 .container{ 
     margin-left: 4vw;
     margin-right: 4vw;
+    margin-top: 1vw;
     display: flex;
     flex-direction: row;
 }
@@ -11,7 +36,9 @@
 
    
 }
-
+.avatar{
+    color: cyan;
+}
 .history {    
     height: 70vh;
     padding: 30px, 30px, 30px, 30px;

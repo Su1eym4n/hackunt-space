@@ -1,3 +1,27 @@
+.navLinkContainer {
+  width: 60%;
+}
+
+.navLinkTop {
+  height: 6vh;
+  width: 100%;
+  float: left;
+}
+
+.navLink {
+  color: white;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: right;
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+.navLink:hover {
+  cursor: pointer;
+}
+
 .container {
   background-image: url("../public/galaxy.mov");
   height: 100%;
@@ -26,6 +50,7 @@
   flex-direction: row;
   background: transparent;
 }
+
 
 .title{
   float: left;
