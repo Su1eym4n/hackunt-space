@@ -6,26 +6,58 @@ import OrbitControls from '../components/OrbitControls'
 import ChatPlanet from '../components/ChatPlanet'
 import Button from '@mui/material/Button'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 export default function Chat() {
 
+    //Rotate speed can vary, X must get higher each stage
     const stage1 = {
-        rotateAmount: 0.01,
-        planetX: 5,
-        planetY: 6
-
+        rotateSpeed: 0.01,
+        planetX: 1,
     }
     const stage2 = {
-        rotateAmount: 0.00,
-        planetX: 0,
-        planetY: 0
+        rotateSpeed: 0.01,
+        planetX: 2
+    }
+    const stage3 = {
+        rotateSpeed: 0.005,
+        planetX: 2.5
+    }
+    const stage4 = {
+        rotateSpeed: 0.02,
+        planetX: 3
+    }
+    const stage5 = {
+        rotateSpeed: 0.03,
+        planetX: 4
+    }
+    const stage6 = {
+        rotateSpeed: 0.01,
+        planetX: 40000
     }
 
+<<<<<<< HEAD
 
 
     const [currentStage, setStage] = useState(stage1)
+=======
+    
+    const stages = [stage1, stage2, stage3, stage4, stage5, stage6]
+
+    const [currentStage, setStage] = useState(stage1)
+    const [currentIndex, setIndex]= useState(1)
+
+    const nextStage = () => {
+
+        if(currentIndex <= 5) {
+            setIndex(currentIndex+1)
+            console.log(currentIndex)
+            setStage( stages[currentIndex] )
+        }
+        
+    }
+>>>>>>> be29ec7c80ac88213a41646ee8433513fea6fc8e
 
     return (
         <>
@@ -33,6 +65,7 @@ export default function Chat() {
 
                 <div className={css.history}>
                     History here
+<<<<<<< HEAD
                     <Button onClick={(event) => setStage(stage2)}>Click Me</Button>
                     <Button onClick={(event) => setStage(stage1)}>stage1</Button>
                     <Message
@@ -43,6 +76,11 @@ export default function Chat() {
                         text="kyoyo wasj; j;kk[pko[h jtyuhbmrot 8;iyuhog8"
                         sender="U"
                     />
+=======
+                    <Button onClick={ (event) => setStage(stage2) }>Click Me</Button>
+                    <Button onClick={ (event) => setStage(stage1) }>stage1</Button>
+                    <Button onClick={ (event) => nextStage() }>nextStage</Button>
+>>>>>>> be29ec7c80ac88213a41646ee8433513fea6fc8e
                 </div>
                 <div className={css.scene}>
                     <Canvas
@@ -52,9 +90,9 @@ export default function Chat() {
                             position: [2, 2, 0],
                         }}
                     >
-                        <ambientLight color={"white"} intensity={0.2} />
+                        <ambientLight color={"white"} intensity={0.1} />
                         <LightBulb position={[0, 5, 3]} />
-                        <ChatPlanet rotateToX={currentStage.planetX} rotateYamt={currentStage.planetY} rotateAmount={currentStage.rotateAmount} />
+                        <ChatPlanet rotateToX={currentStage.planetX} rotateAmount={currentStage.rotateSpeed} />
                         {/* <OrbitControls/> */}
                     </Canvas>
                 </div>

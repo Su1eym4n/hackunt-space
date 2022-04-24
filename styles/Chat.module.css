@@ -15,5 +15,5 @@
     float: left;
     height: 75vh;
     width: 75vw;
-    background: black;
+    background-image: url('../public/stars.jpeg');
 }
