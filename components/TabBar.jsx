@@ -5,10 +5,10 @@ import Box from '@mui/material/Box';
 import { useRouter } from 'next/router'
 import { useState } from 'react';
 
-function Tabs() {
+function Tab() {
     return (
         <div>hell</div>
     )
 }
 
-export default Tabs
+export default Tab
