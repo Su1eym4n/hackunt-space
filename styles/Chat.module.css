@@ -1,20 +1,32 @@
-.navLinkContainer {
-  width: 65%;
+.background {
 }
 
-.navLinkTop {
-  height: 6vh;
-  width: 100%;
-  float: left;
+.navLinkContainer {
+  width: 60%;
+  margin-top: 6vh;
+}
+
+.title{
+    color: white;
+    font-weight: bold;
+    font-size: 2.5vw;
+    margin-top: 5vh;
+    padding-left: 1vw;
+}
+
+.logo {
+    height: 1em;
+    font-size: 4vw;
+    margin-left: 4vw;
+    margin-top: 4vh;
 }
 
 .navLink {
   color: white;
-  float: left;
   padding-left: 15px;
   padding-right: 15px;
   float: right;
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-weight: bold;
 }
 
@@ -23,65 +35,56 @@
 }
 
 .container{ 
-
     display: flex;
     flex-direction: row;
+    margin: 4vw;
+    margin-top: 0;
 }
 
 .sideWrapper{
+    margin-top: 4vh;
     display: flex;
     flex-direction: column;
-   
 }
 
-.history {    
+.history{    
+    margin-top: 4vh;
     height: 70vh;
-    padding: 30px, 30px, 30px, 30px;
-    background: #1d3030;
+    width: 30vw;
+    /* padding: 30px, 30px, 30px, 30px; */
+    /* background: #1d3030; */
     border-style:solid;
     border-width:3px;
     border-color:#04663f;
     box-shadow: 15px 15px 15px rgba(0,0,0);
     overflow: auto;
-    width: 50%;
+    /* width: 50%; */
     box-shadow: 0px 0px 40px 40px #03A062;
     -moz-box-shadow:    inset 0 0 30px #03A062;
     -webkit-box-shadow: inset 0 0 30px #03A062;
     box-shadow:         inset 0 0 30px #03A062;
+}
 
-}
 .choices{
-    background: black;
-    padding: 30px, 30px, 30px, 30px;
+    /* background: black; */
+    /* padding: 30px, 30px, 30px, 30px; */
 }
-.scene {
-    height: 75vh;
-    width: 75vw;
-    background-image: url('../public/stars.jpeg');
+
+.scene{
+    margin-top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(circle, transparent, transparent, black, black), url("../public/imposter.mp4");
+    /* background-color: white; */
 }
 
 .nav{
     display: flex;
     flex-direction: row;
     background: transparent;
-  }
+}
   
-  .title{
-    color: white;
-    font-weight: bold;
-    font-size: 2.5vw;
-    margin-top: 5vh;
-    padding-left: 1vw;
-  }
-  .logo {
-    height: 1em;
-    margin-left: 0.5rem;
-  }
-
-  .logo{
-    font-size: 4vw;
-    margin-left: 4vw;
-    margin-top: 4vh;
-  }
-
-  
+@keyframes fade-in {
+    from {display: none;}
+    to {display: block;}
+}
