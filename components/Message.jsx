@@ -5,7 +5,7 @@ import TypeAnim from './TypeAnim'
 const Message = ({ sender, text }) => {
     var prefix = ''
     if (sender == 'A') {
-        prefix = 'Astronaout: '
+        prefix = 'Ast: '
     } else {
         prefix = 'You: '
     }

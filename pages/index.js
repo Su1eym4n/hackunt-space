@@ -23,9 +23,6 @@ export default function Home() {
         <TabBar className={css.tab}/>
       </div>
 {/* body */}
-<<<<<<< HEAD
-
-=======
       <div className={css.body}>
         <div className={css.intro}>
           <div className={css.col1}>
@@ -55,7 +52,6 @@ export default function Home() {
           <div className={css.col}> 3,743 Comets</div>
         </div>
       </div>
->>>>>>> d54baec049416c196c75a4b597e5931f5e9cd475
     </div>
   )
 }
