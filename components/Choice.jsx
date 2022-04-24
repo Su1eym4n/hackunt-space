@@ -1,6 +1,8 @@
 import React from 'react'
 import css from '../styles/Home.module.css'
 const Choice = ({ text }) => {
+
+
     const decide = (event)=>{
         event.preventDefault()
         console.log(text)
